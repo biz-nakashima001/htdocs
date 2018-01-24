@@ -9,7 +9,10 @@
 
 <body onload="initial();">
 	<h1>Vue.js</h1>
-	<p id="msg">{{message}}</p>
+	<div id="msg">
+	<p>{{message}}</p>
+	<input type="text" v-model="message">
+	</div>
 </body>
 </html>
 
