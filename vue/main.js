@@ -9,7 +9,7 @@
 		methods: {
 			doAction: function(){
 				var str = this.text1;
-				this.message = 'you typed:' + str +'.';
+				this.message = 'you typed: <span style="color:white; background:red">' + str + '</span>';
 			}	
 		}
 	})
