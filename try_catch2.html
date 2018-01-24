@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>サンプルページ</title>
+</head>
+<body>
+  <script>
+	var a = 1, b = 0;
+	try {
+	  if (b == 0){
+	    throw new Error('0で割り算しようとしました。')
+	  }
+	} catch(e) {
+	  window.alert(e);
+	}
+ </script>
+</body>
+</html>
