@@ -1,17 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-	<title>Hello</title>
+	<meta charset="utf-8">
+	<title>vue</title>
+	<link rel="stylesheet" href="style.css"></link>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="main.js"></script>
-	<link rel="stylesheet" href="style.css"></link>
 </head>
 
 <body onload="initial();">
 	<h1>Vue.js</h1>
-	<div id="example">
-  <p>Original message: "{{ message }}"</p>
-  <p>Computed reversed message: "{{ reversedMessage }}"</p>
-</div>
+	<p>参照：<a href="https://qiita.com/sekiyaeiji/items/f1df5d9d4c8a147eed77">Vue.js 2.x 入門</a></p>
+	<div id="component01">
+		<h2>001:v-text</h2>
+		<p>mustache構文の出力:{{text}}</p>
+		<p>v-textの出力<span v-text="text"></span>
+	</div>
+	<div id="component02">
+		<h2>002:v-model</h2>
+    <p><input v-model="text" type="text"></p>
+    <p>ここに入力文字列を表示します ： {{ text }}</p>
+	</div>
+	<div id="component03">
+		<h2>003:v-on:click</h2>
+    <p><input v-model="input" type="text"></p>
+    <p v-on:click="output" class="button mb10">入力文字列を反映</p>
+    <p>ここに入力文字列を表示します ： {{ text }}</p>
+	</div>
+	<div id="component04">
+		<h2>004:v-html</h2>
+    <p class="mb10"><input v-model="input" type="text"></p>
+    <p v-on:click="output" class="button mb10">入力文字列を反映</p>
+    <div>ここにHTMLコードを表示します ： {{ html }}</div>
+    <div>ここにHTML出力を表示します ： <span v-html="html"></span></div>
+	</div>
+	<div id="component05">
+		<h2>005:javascript式</h2>
+    <p><input v-model="number" type="number"></p>
+    <p>ここに2倍の数字を表示します ： {{ number * 2 }}</p>
+	</div>
 </body>
 </html>
