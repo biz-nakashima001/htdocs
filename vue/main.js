@@ -60,4 +60,33 @@
 		}
 	});
 
+	new Vue({
+		el: '#component07',
+		data: {
+			number: '0'
+		},
+		computed: {
+			calc3Times: function () {
+				return this.number * 3;
+			}
+		}
+	});
+
+	new Vue({
+		el: '#component08',
+		data: {
+			origin: '100'
+		},
+		computed: {
+			withTax: {
+				get: function () {
+					return parseInt(this.origin * 1.08)
+				},
+				set: function (value) {
+					this.origin = Math.ceil(value / 1.08);
+				}
+			}
+		}
+	});
+
 }

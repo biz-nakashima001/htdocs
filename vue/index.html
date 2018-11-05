@@ -18,32 +18,42 @@
 	</div>
 	<div id="component02">
 		<h2>002:v-model</h2>
-    <p><input v-model="text" type="text"></p>
-    <p>ここに入力文字列を表示します ： {{ text }}</p>
+		<p><input v-model="text" type="text"></p>
+		<p>ここに入力文字列を表示します ： {{ text }}</p>
 	</div>
 	<div id="component03">
 		<h2>003:v-on:click</h2>
-    <p><input v-model="input" type="text"></p>
-    <p v-on:click="output" class="button mb10">入力文字列を反映</p>
-    <p>ここに入力文字列を表示します ： {{ text }}</p>
+		<p><input v-model="input" type="text"></p>
+		<p v-on:click="output" class="button mb10">入力文字列を反映</p>
+		<p>ここに入力文字列を表示します ： {{ text }}</p>
 	</div>
 	<div id="component04">
 		<h2>004:v-html</h2>
-    <p class="mb10"><input v-model="input" type="text"></p>
-    <p v-on:click="output" class="button mb10">入力文字列を反映</p>
-    <div>ここにHTMLコードを表示します ： {{ html }}</div>
-    <div>ここにHTML出力を表示します ： <span v-html="html"></span></div>
+		<p class="mb10"><input v-model="input" type="text"></p>
+		<p v-on:click="output" class="button mb10">入力文字列を反映</p>
+		<div>ここにHTMLコードを表示します ： {{ html }}</div>
+		<div>ここにHTML出力を表示します ： <span v-html="html"></span></div>
 	</div>
 	<div id="component05">
 		<h2>005:javascript式</h2>
-    <p><input v-model="number" type="number"></p>
-    <p>ここに2倍の数字を表示します ： {{ number * 2 }}</p>
+		<p><input v-model="number" type="number"></p>
+		<p>ここに2倍の数字を表示します ： {{ number * 2 }}</p>
 	</div>
 	<div id="component06">
+		<h2>006:フィルター</h2>
 		<p><input v-model="text" type="text"></p>
 		<p>ここに入力文字列の大文字を表示します ： {{ text | toUpperCase }}</p>
 	</div>
-
+	<div id="component07">
+		<h2>007:computed</h2>
+		<p><input v-model="number" type="number"></p>
+		<p>ここに3倍の数字を表示します ： {{ calc3Times }}</p>
+	</div>
+	<div id="component08">
+		<h2>008:computed get set</h2>
+		<p>税抜価格 ： <input v-model="origin" type="number"></p>
+		<p>税込価格 ： <input v-model="withTax" type="number"></p>
+	</div>
 
 </body>
 </html>
