@@ -89,4 +89,28 @@
 		}
 	});
 
+	new Vue({
+		el: '#component09',
+		data: {
+			isShow: true,
+			isHide: false
+		},
+		methods: {
+			toggleClass: function () {
+				this.isShow = !this.isShow;
+				this.isHide = !this.isHide;
+			}
+		}
+	});
+
+	new Vue({
+		el: '#component10',
+		data: {
+			isChecked: true
+		},
+		created: function () {
+			this.flag = true;
+		}
+	});
+
 }
