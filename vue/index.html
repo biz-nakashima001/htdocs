@@ -39,5 +39,11 @@
     <p><input v-model="number" type="number"></p>
     <p>ここに2倍の数字を表示します ： {{ number * 2 }}</p>
 	</div>
+	<div id="component06">
+		<p><input v-model="text" type="text"></p>
+		<p>ここに入力文字列の大文字を表示します ： {{ text | toUpperCase }}</p>
+	</div>
+
+
 </body>
 </html>
