@@ -1,8 +1,9 @@
 ﻿function initial(){
+
 	new Vue({
 		el: '#component01',
 		data:{
-			text: 'テスト用入力値'
+			text: 'TextForTest_testtesttest'
 		}
 	});
 
@@ -56,6 +57,11 @@
 				if (!value) return ''
 				value = value.toString()
 				return value.toUpperCase()
+			},
+			toLowerCase: function (value) {
+				if (!value) return ''
+				value = value.toString()
+				return value.toLowerCase()
 			}
 		}
 	});
@@ -75,7 +81,7 @@
 	new Vue({
 		el: '#component08',
 		data: {
-			origin: '100'
+			origin: '1000'
 		},
 		computed: {
 			withTax: {
@@ -110,6 +116,40 @@
 		},
 		created: function () {
 			this.flag = true;
+		}
+	});
+
+	new Vue({
+		el: '#component11',
+		data: {
+			data: [
+				'hoge',
+				'huga',
+				'piyo',
+				'punyo'
+			]
+		},
+		created: function () {
+			this.flag = true;
+		}
+	});
+
+	Vue.component ('component12', {
+		props: ['data'],
+		template: '#js-template-component12'
+	});
+	
+	new Vue({
+		el: '#component12',
+		data: {
+			data: []
+		}
+	});
+
+	new Vue({
+		el: '#component13',
+		data: {
+			data: []
 		}
 	});
 
