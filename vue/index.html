@@ -14,63 +14,63 @@
 		<p>参照: <a href="https://qiita.com/sekiyaeiji/items/f1df5d9d4c8a147eed77">Vue.js 2.x 入門</a></p>
 	</div>
 	<div id="component01" class="component">
-		<h2>001: v-textの確認</h2>
-		<p>テスト用テキスト 'TextForTest_testtesttest'</p>
-		<p>mustache構文の出力:{{text}}</p>
-		<p>v-textの出力<span v-text="text"></span>
+		<h2>01: v-textの確認</h2>
+		<p>テスト用テキスト: 'テストテストテストtest'</p>
+		<p>mustache構文の出力: {{text}}</p>
+		<p>v-textの出力: <span v-text="text"></span>
 	</div>
 	<div id="component02"  class="component">
-		<h2>002: v-model確認</h2>
+		<h2>02: v-model確認</h2>
 		<p>文字列を入力: <input v-model="text" type="text"></p>
-		<p>ここに入力文字列を表示します ： {{ text }}</p>
+		<p>ここに入力文字列を表示します: {{ text }}</p>
 	</div>
 	<div id="component03"  class="component">
-		<h2>003: v-on:clickの確認</h2>
+		<h2>03: v-on:clickの確認</h2>
 		<p>文字列を入力: <input v-model="input" type="text"></p>
 		<p v-on:click="output" class="button mb10">入力文字列を反映</p>
-		<p>ここに入力文字列を表示します ： {{ text }}</p>
+		<p>ここに入力文字列を表示します: {{ text }}</p>
 	</div>
 	<div id="component04"  class="component">
-		<h2>004: v-htmlの確認</h2>
+		<h2>04: v-htmlの確認</h2>
 		<p>文字列を入力: <input v-model="input" type="text"></p>
 		<p v-on:click="output" class="button mb10">入力文字列を反映</p>
-		<div>ここにHTMLコードを表示します ： {{ html }}</div>
-		<div>ここにHTML出力を表示します ： <span v-html="html"></span></div>
+		<div>ここにHTMLコードを表示します: {{ html }}</div>
+		<div>ここにHTML出力を表示します: <span v-html="html"></span></div>
 	</div>
 	<div id="component05"  class="component">
-		<h2>005: javascript式の確認</h2>
+		<h2>05: javascript式の確認</h2>
 		<p><input v-model="number" type="number"></p>
 		<p>ここに2倍の数字を表示します ： {{ number * 2 }}</p>
 	</div>
 	<div id="component06"  class="component">
-		<h2>006: フィルターの確認</h2>
+		<h2>06: フィルターの確認</h2>
 		<p>文字列を入力: <input v-model="text" type="text"></p>
 		<p>ここに入力文字列の大文字を表示します ： {{ text | toUpperCase }}</p>
 		<p>ここに入力文字列の小文字を表示します ： {{ text | toLowerCase }}</p>
 	</div>
 	<div id="component07"  class="component">
-		<h2>007: computedの確認</h2>
+		<h2>07: computedの確認</h2>
 		<p><input v-model="number" type="number"></p>
 		<p>ここに3倍の数字を表示します ： {{ calc3Times }}</p>
 	</div>
 	<div id="component08" class="component">
-		<h2>008: computed get、setの確認</h2>
+		<h2>08: computed get、setの確認</h2>
 		<p>税抜 ： <input v-model="origin" type="number"></p>
 		<p>税込 ： <input v-model="withTax" type="number"></p>
 	</div>
 	<div id="component09" class="component">
-		<h2>009: v-bind:classの確認</h2>
+		<h2>09: v-bind:classの確認</h2>
 		<p v-on:click="toggleClass" class="button mb10">classを切り替え</p>
 		<p>ターゲット>>[&nbsp;<span v-bind:class="{'isShow': isShow, 'isHide': isHide}">表示非表示が切り替わります</span>&nbsp;]</p>
 	</div>
 	<div id="component10" class="component">
-		<h2>010: v-if/v-elseの確認</h2>
+		<h2>10: v-if/v-elseの確認</h2>
 		<p><input type="checkbox" v-model="isChecked" id="cb001"><label for="cb001"> 税込み／税抜き</label></p>
 		<p v-if="isChecked">税込み （例 ： 1,080円）</p>
 		<p v-else>税抜き （例 ： 1,000円）</p>
 	</div>
 	<div id="component11" class="component">
-		<h2>011: v-forの確認</h2>
+		<h2>11: v-forの確認</h2>
 		<ul>
 			<li v-for="(item, index) in data">
 				{{ index + 1 }} - {{ item }}
@@ -87,7 +87,7 @@
 	</template>
 		
 	<div id="component12" class="component">
-		<h2>012: component定義の確認</h2>
+		<h2>12: component定義の確認</h2>
 		<component12 data="山, 川, 豊か, お団子"></component12>
 	</div>
 </body>

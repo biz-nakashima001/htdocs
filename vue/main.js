@@ -3,7 +3,7 @@
 	new Vue({
 		el: '#component01',
 		data:{
-			text: 'TextForTest_testtesttest'
+			text: 'テストテストテストtest'
 		}
 	});
 
